@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me — Roza</title>
+    <style>
+        /* --- Basic Reset --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #f0f0f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #6a5acd;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        nav {
+            background: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #6a5acd;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #483d8b;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #6a5acd;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #6a5acd;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: #6a5acd;
+            color: white;
+            margin-top: 40px;
+        }
+
+        /* Buttons */
+        .contact a {
+            display: inline-block;
+            background: #6a5acd;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin-right: 10px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .contact a:hover {
+            background: #483d8b;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Hi, I'm Roza 👋</h1>
+    <p>Welcome to my personal website!</p>
+</header>
+
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#learning">Currently Learning</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <ul>
+            <li><strong>Date of Birth:</strong> 08.03.2006</li>
+            <li><strong>Zodiac Sign:</strong> Pisces ♓</li>
+            <li><strong>Languages:</strong> Russian, English, Kazakh (native)</li>
+            <li><strong>Education:</strong> Kazakh National Women's Pedagogical University, major: Scientific Physics</li>
+            <li><strong>Tech Journey:</strong> I fell in love with IT at university and hope to create my own app or something bigger in the future</li>
+        </ul>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects & Tasks</h2>
+    <div class="card">
+        <h3>Scientific Projects</h3>
+        <ul>
+            <li>Phase transitions in unusual conditions (magnetic/electric fields, extreme temperatures)</li>
+            <li>Physical processes influencing earthquakes</li>
+            <li>Complex numbers and functions of a complex variable</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Educational & Science Activities</h3>
+        <ul>
+            <li>Organized scientific debates and events for students</li>
+            <li>Participated in masterclasses, olympiads, and team-building events</li>
+            <li>Conducted presentations and research summaries in physics</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Technologies</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Java</li>
+        </ul>
+    </div>
+</section>
+
+<section id="learning">
+    <h2>Currently Learning</h2>
+    <div class="card">
+        <ul>
+            <li>Advanced web development</li>
+            <li>Scientific programming and simulations</li>
+            <li>New physics topics and experiments</li>
+        </ul>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="card contact">
+        <a href="mailto:raroza01@gmail.com">Email</a>
+        <a href="https://instagram.com/rozamynn_" target="_blank">Instagram @rozamynn_</a>
+        <a href="https://github.com/raroza01-web/raroza" target="_blank">GitHub Profile</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Roza. All rights reserved.</p>
+</footer>
+
+<script>
+    // Smooth scroll for navigation
+    const links = document.querySelectorAll('nav a');
+    for(const link of links){
+        link.addEventListener('click', function(e){
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+</script>
+
+</body>
+</html>
